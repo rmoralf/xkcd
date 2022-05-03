@@ -7,6 +7,8 @@
     <string name="latest_comic">Latest comic</string>
     <string name="random">Random comic</string>
     <string name="search">Search</string>
+    <string name="share">Share</string>
+    <string name="explain">explain xkcd</string>
     <string name="dialog_search">Search</string>
     <string name="dialog_cancel">Cancel</string>
     <string name="search_comic_number">Comic number</string>

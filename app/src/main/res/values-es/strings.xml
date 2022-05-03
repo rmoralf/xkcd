@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">xkcd</string>
+    <string name="topbar_title">xkcd</string>
+    <string name="first_comic">Primer cómic</string>
+    <string name="previous">Cómic anterior</string>
+    <string name="next">Siguiente cómic</string>
+    <string name="latest_comic">Último cómic</string>
+    <string name="random">Cómic al azar</string>
+    <string name="search">Buscar</string>
+    <string name="share">Compartir</string>
+    <string name="explain">explain xkcd</string>
+    <string name="dialog_search">Buscar</string>
+    <string name="dialog_cancel">Cancelar</string>
+    <string name="search_comic_number">Número de cómic</string>
+    <string name="search_error_bad_input">Formato inválido. No uses números decimales.</string>
+    <string name="search_error_max_comic">Número de cómic inválido. El último cómic es el #%1$d.</string>
+</resources>

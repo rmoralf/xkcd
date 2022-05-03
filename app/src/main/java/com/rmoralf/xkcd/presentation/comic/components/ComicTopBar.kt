@@ -41,12 +41,12 @@ fun ComicTopBar(
             IconButton(onClick = {
                 shareImage(context, viewModel.currentImageUrl, viewModel.currentComicId)
             }) {
-                Icon(Icons.Default.Share, stringResource(id = R.string.search))
+                Icon(Icons.Default.Share, stringResource(id = R.string.share))
             }
             IconButton(onClick = {
                 openExplanation(localUriHandler, viewModel.currentComicId)
             }) {
-                Icon(Icons.Default.Info, stringResource(id = R.string.search))
+                Icon(Icons.Default.Info, stringResource(id = R.string.explain))
             }
         }
     )
