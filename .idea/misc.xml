@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="../../../../layout/compose-model-1651495657399.xml" value="0.2212962962962963" />
+        <entry key="../../../../layout/compose-model-1651498147815.xml" value="0.2212962962962963" />
+        <entry key="../../../../layout/compose-model-1651501072204.xml" value="0.2212962962962963" />
+        <entry key="../../../../layout/compose-model-1651503114531.xml" value="0.2212962962962963" />
+        <entry key="../../../../layout/compose-model-1651504911337.xml" value="0.2212962962962963" />
+        <entry key="../../../../layout/compose-model-1651505931048.xml" value="0.15160472972972974" />
+        <entry key="../../../../layout/compose-model-1651507436987.xml" value="0.15160472972972974" />
+        <entry key="../../../../layout/compose-model-1651509187518.xml" value="0.2212962962962963" />
+        <entry key="../../../../layout/compose-model-1651513755450.xml" value="0.2212962962962963" />
+        <entry key="../../../../layout/compose-model-1651572667114.xml" value="0.2212962962962963" />
+        <entry key="../../../../layout/compose-model-1651577492534.xml" value="0.2212962962962963" />
+        <entry key="../../../../layout/compose-model-1651579849065.xml" value="0.2212962962962963" />
+        <entry key="../../../../layout/compose-model-1651586001187.xml" value="0.2212962962962963" />
+        <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1195" />
+        <entry key="app/src/main/res/drawable/baseline_chevron_left_24.xml" value="0.183" />
+        <entry key="app/src/main/res/drawable/baseline_chevron_right_24.xml" value="0.183" />
+        <entry key="app/src/main/res/drawable/baseline_last_page_24.xml" value="0.183" />
+        <entry key="app/src/main/res/drawable/baseline_shuffle_24.xml" value="0.183" />
+        <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.1195" />
+        <entry key="app/src/main/res/drawable/outline_first_page_24.xml" value="0.183" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

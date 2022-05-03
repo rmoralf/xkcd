@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">xkcd</string>
+    <string name="topbar_title">xkcd</string>
+    <string name="first_comic">First comic</string>
+    <string name="previous">Previous comic</string>
+    <string name="next">Next comic</string>
+    <string name="latest_comic">Latest comic</string>
+    <string name="random">Random comic</string>
+    <string name="search">Search</string>
+    <string name="dialog_search">Search</string>
+    <string name="dialog_cancel">Cancel</string>
+    <string name="search_comic_number">Comic number</string>
+    <string name="search_error_bad_input">Invalid input. Do not use decimal numbers.</string>
+    <string name="search_error_max_comic">Invalid comic number. Latest comic is #%1$d.</string>
+</resources>
