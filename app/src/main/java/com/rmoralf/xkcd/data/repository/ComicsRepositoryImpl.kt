@@ -4,8 +4,10 @@ import com.rmoralf.xkcd.data.network.remote.ComicsService
 import com.rmoralf.xkcd.domain.model.Response.*
 import com.rmoralf.xkcd.domain.model.toDomain
 import com.rmoralf.xkcd.domain.repository.ComicsRepository
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.flow.flow
+import kotlinx.coroutines.flow.flowOn
 import javax.inject.Inject
 import javax.inject.Singleton
 
