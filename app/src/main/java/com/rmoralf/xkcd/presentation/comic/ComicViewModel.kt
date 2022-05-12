@@ -48,7 +48,7 @@ class ComicViewModel @Inject constructor(
     fun getRandomComic() = getComic((1..latestComicId).random())
     fun getNextComic() = getComic(currentComicId + 1)
 
-    private fun getComic(comicId: Int) {
+    fun getComic(comicId: Int) {
         if (comicId != currentComicId && comicId in 1..latestComicId) {
             viewModelScope.launch {
                 useCases.getComic(comicId).collect { response ->

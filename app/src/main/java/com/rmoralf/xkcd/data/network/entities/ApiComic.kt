@@ -1,6 +1,6 @@
 package com.rmoralf.xkcd.data.network.entities
 
-class ApiComic(
+data class ApiComic(
     val alt: String,
     val day: String,
     val img: String,
