@@ -8,6 +8,4 @@ object Constants {
     //Retrofit2
     const val API_ENDPOINT = "https://xkcd.com/"
     const val CACHE_SIZE: Long = 10 * 1024 * 1024 // 10MB
-
-
 }

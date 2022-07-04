@@ -2,13 +2,12 @@ package com.rmoralf.xkcd.domain.model
 
 import com.google.common.truth.Truth.assertThat
 import com.rmoralf.xkcd.data.network.entities.ApiComic
-import junit.framework.Assert.assertEquals
 import org.junit.Test
 
 class ComicTest {
 
     @Test
-    fun `ApiComic translates into domain Comic class`(){
+    fun `ApiComic translates into domain Comic class`() {
         val apiComic = ApiComic(
             alt = "AAAAAAA",
             day = "01",

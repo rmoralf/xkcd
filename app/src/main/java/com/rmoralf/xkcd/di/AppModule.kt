@@ -47,7 +47,7 @@ object AppModule {
     //Retrofit2
     @Provides
     fun provideLoggingInterceptor(): HttpLoggingInterceptor = HttpLoggingInterceptor().apply {
-        level = HttpLoggingInterceptor.Level.HEADERS
+        level = HttpLoggingInterceptor.Level.BASIC
     }
 
     @Provides
