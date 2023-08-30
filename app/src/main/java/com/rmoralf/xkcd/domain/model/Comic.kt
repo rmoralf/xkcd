@@ -10,7 +10,7 @@ data class Comic(
     val month: String,
     val news: String,
     val num: Int,
-    val safe_title: String,
+    val safeTitle: String,
     val title: String,
     val transcript: String,
     val year: String
@@ -24,7 +24,7 @@ fun ApiComic.toDomain() = Comic(
     month = month,
     news = news,
     num = num,
-    safe_title = safe_title,
+    safeTitle = safe_title,
     title = title,
     transcript = transcript,
     year = year

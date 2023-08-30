@@ -16,6 +16,7 @@ class ComicViewModel @Inject constructor(
     private val useCases: UseCases
 ) : ViewModel() {
 
+
     private val _state = mutableStateOf<Response<Comic>>(Response.Loading)
     val state: State<Response<Comic>> = _state
 
@@ -34,6 +35,7 @@ class ComicViewModel @Inject constructor(
             viewModelScope.launch {
                 useCases.getLatestComic().collect { response ->
                     _state.value = response
+                    println("KKKKKK $response")
 
                     if (response is Response.Success)
                         latestComicId = response.data.num
@@ -45,7 +47,7 @@ class ComicViewModel @Inject constructor(
     fun findComic(comicId: Int) = getComic(comicId)
     fun getFirstComic() = getComic(1)
     fun getPreviousComic() = getComic(currentComicId - 1)
-    fun getRandomComic() = getComic((1..latestComicId).random())
+    fun getRandomComic() = if (latestComicId > 0) getComic((1..latestComicId).random()) else null
     fun getNextComic() = getComic(currentComicId + 1)
 
     private fun getComic(comicId: Int) {

@@ -5,7 +5,7 @@ import androidx.compose.material.lightColors
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
 
-private val LightColorPalette = lightColors(
+private val _lightColorPalette = lightColors(
 //    primary = Purple500,
 //    primaryVariant = Purple700,
 //    secondary = Teal200,
@@ -25,7 +25,7 @@ private val LightColorPalette = lightColors(
 fun XkcdTheme(content: @Composable () -> Unit) {
 
     MaterialTheme(
-        colors = LightColorPalette,
+        colors = _lightColorPalette,
         typography = Typography,
         shapes = Shapes,
         content = content

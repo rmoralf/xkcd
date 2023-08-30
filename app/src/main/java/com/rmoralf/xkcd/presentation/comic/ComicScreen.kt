@@ -1,5 +1,6 @@
 package com.rmoralf.xkcd.presentation.comic
 
+import android.annotation.SuppressLint
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -18,6 +19,7 @@ import com.rmoralf.xkcd.presentation.comic.components.ComicSearchDialog
 import com.rmoralf.xkcd.presentation.comic.components.ComicTopBar
 import com.rmoralf.xkcd.presentation.components.ProgressBar
 
+@SuppressLint("UnusedMaterialScaffoldPaddingParameter")
 @Composable
 fun ComicScreen(
     viewModel: ComicViewModel = hiltViewModel()

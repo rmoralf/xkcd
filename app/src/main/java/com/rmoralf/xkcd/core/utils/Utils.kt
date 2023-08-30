@@ -5,17 +5,20 @@ import android.content.Intent
 import android.graphics.Bitmap
 import android.graphics.drawable.BitmapDrawable
 import android.net.Uri
-import android.provider.MediaStore
 import android.util.Log
 import android.widget.Toast
 import androidx.annotation.StringRes
 import androidx.compose.ui.platform.UriHandler
+import androidx.core.content.FileProvider
 import coil.ImageLoader
 import coil.request.ImageRequest
 import com.rmoralf.xkcd.core.utils.Constants.API_ENDPOINT
 import com.rmoralf.xkcd.core.utils.Constants.EXPLANATION_URL
 import com.rmoralf.xkcd.core.utils.Constants.TAG
-import java.io.ByteArrayOutputStream
+import java.io.File
+import java.io.FileNotFoundException
+import java.io.FileOutputStream
+import java.io.IOException
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -61,6 +64,8 @@ class Utils {
 
                     val intent = Intent(Intent.ACTION_SEND)
                     intent.type = "image/*"
+                    intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
+                    intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
                     intent.putExtra(Intent.EXTRA_STREAM, getImageUri(context, bitmap))
                     intent.putExtra(Intent.EXTRA_TEXT, getXkcdLink(comicId))
                     context.startActivity(Intent.createChooser(intent, "Share Image"))
@@ -76,15 +81,29 @@ class Utils {
         }
 
         private fun getImageUri(context: Context, bitmap: Bitmap): Uri? {
-            val bytes = ByteArrayOutputStream()
-            bitmap.compress(Bitmap.CompressFormat.JPEG, 100, bytes)
-            val path = MediaStore.Images.Media.insertImage(
-                context.contentResolver,
-                bitmap,
-                "xkcd",
-                null
+
+            val cachePath = File(context.externalCacheDir, "xkcd_images/")
+            cachePath.mkdirs()
+
+            val file = File(cachePath, "xkcd_share.png")
+            val fileOutputStream: FileOutputStream
+            try {
+                fileOutputStream = FileOutputStream(file)
+                bitmap.compress(Bitmap.CompressFormat.PNG, 100, fileOutputStream)
+                fileOutputStream.flush()
+                fileOutputStream.close()
+            } catch (e: FileNotFoundException) {
+                e.printStackTrace()
+            } catch (e: IOException) {
+                e.printStackTrace()
+            }
+
+            return FileProvider.getUriForFile(
+                context,
+                context.applicationContext.packageName + ".provider", file
             )
-            return Uri.parse(path)
         }
     }
+
+
 }
